@@ -13,6 +13,7 @@ import java.util.List;
 @Controller
 public class UserController {
     @Resource
+    //你个打破森
     private UserService userServiceImpl;
     @RequestMapping("list")
     public String getUserList(Model model ) throws Exception{
