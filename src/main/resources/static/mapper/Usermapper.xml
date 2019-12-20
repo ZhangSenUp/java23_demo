@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="comzs.java23_demo.dao.Usermapper">
+    <select id="getUserList" resultType="comzs.java23_demo.pojo.User">
+            select * from student
+    </select>
+    <select id="getClassList" resultType="comzs.java23_demo.pojo.Classes">
+        select * from classes
+    </select>
+    <insert id="getadd" parameterType="comzs.java23_demo.pojo.User">
+        insert into student(name,age,gender,telephone,email,classId)
+        value (#{name},#{age},#{gender},#{telephone},#{email},#{classId})
+    </insert>
+</mapper>
